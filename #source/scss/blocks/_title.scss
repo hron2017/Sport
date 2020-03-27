@@ -1,0 +1,114 @@
+.title {
+  color: #ffffff;
+  font-family: "Gilroy";
+  font-size: 161px;
+  font-weight: 800;
+  line-height: 118px;
+  letter-spacing: 1px;
+  position: relative;
+  z-index: 3;
+  text-transform: uppercase;
+}
+.subtitle {
+  font-family: "Gilroy";
+  font-size: 64px;
+  font-weight: 800;
+  line-height: 49px;
+  text-transform: uppercase;
+  letter-spacing: 8.61px;
+
+  position: relative;
+  z-index: 3;
+
+  overflow: hidden;
+}
+
+.intro {
+  &__title {
+    margin-bottom: 35px;
+
+    &:after {
+      content: "";
+      box-shadow: -750px 34px 250px #000;
+      position: absolute;
+      top: -32%;
+      right: -200%;
+      height: 42%;
+      width: 75%;
+    }
+  }
+  &__subtitle {
+    margin-bottom: 26px;
+    background-image: linear-gradient(to bottom, #5327ff 0%, #11aeff 100%);
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: #2389ff;
+
+    &:after {
+      content: "";
+      box-shadow: -750px 34px 250px #000;
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 42%;
+      width: 75%;
+    }
+  }
+}
+
+.workoutmen {
+  &__title {
+    background-image: linear-gradient(to bottom, #5327ff 0%, #11aeff 100%);
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+
+    font-size: 101px;
+    line-height: 117.93px;
+    letter-spacing: 0.69px;
+
+    margin-bottom: 15px;
+  }
+  &__subtitle {
+    font-size: 58px;
+    line-height: 54.28px;
+    letter-spacing: 8.61px;
+    margin-bottom: 0;
+    color: #ffffff;
+  }
+}
+
+.review {
+  &__title {
+    font-size: 87px;
+    line-height: 78.18px;
+    letter-spacing: 4.87px;
+  }
+  &__subtitle {
+    color: #080808;
+    font-size: 53px;
+    font-weight: 800;
+    line-height: 69.21px;
+    letter-spacing: 8.61px;
+  }
+}
+
+.footer {
+  &__title {
+    background-image: linear-gradient(to bottom, #3e51ff 0%, #189fff 100%);
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-size: 101px;
+    font-weight: 800;
+    line-height: 117.93px;
+    position: relative;
+    letter-spacing: 0.69px;
+  }
+  &__subtitle {
+    color: #ffffff;
+    font-size: 58px;
+    font-weight: 800;
+    line-height: 54.28px;
+
+    letter-spacing: 8.61px;
+  }
+}

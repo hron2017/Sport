@@ -1,0 +1,126 @@
+//<FORM>====================================================================================================
+.intro-form {
+  &:before {
+    content: "";
+    width: 435px;
+    height: 435px;
+    border: 12px solid #5327ff;
+    top: 0;
+    left: 33%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    position: absolute;
+    z-index: 0;
+  }
+}
+.form {
+  position: relative;
+  z-index: 1;
+
+  &:after {
+    content: "";
+
+    box-shadow: -750px 34px 250px #15a6ff;
+    position: absolute;
+    top: -32%;
+    right: -200%;
+    height: 42%;
+    width: 75%;
+  }
+  &__input {
+    margin-bottom: 25px;
+    position: relative;
+    text-align: center;
+    width: 90%;
+  }
+  &__btn {
+    box-shadow: 0 0 90px 16px rgba(35, 31, 32, 0.75);
+    background-image: linear-gradient(-187deg, #5327ff 0%, #11aeff 100%);
+
+    color: #ffffff;
+    font-family: "Gilroy";
+    font-size: 30px;
+    font-weight: 800;
+    line-height: 95.29px;
+    padding: 0px 44px 0px 44px;
+    position: relative;
+    z-index: 3;
+
+    border-radius: 50px;
+    margin-top: 20px;
+
+    letter-spacing: 0.23px;
+  }
+  &__error {
+    position: absolute;
+    top: 0;
+    right: -40%;
+
+    color: #ffffff;
+    font-family: "Gilroy";
+    font-size: 14px;
+
+    background-color: rgb(226, 63, 63);
+    padding: 11px 20px;
+    border-radius: 7px 0 0 7px;
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: -13px;
+      transform: translateY(-50%);
+
+      border: 7px solid transparent;
+      border-right: 7px solid rgb(226, 63, 63);
+    }
+  }
+}
+.form-row {
+  @include flexbox();
+}
+.form__column {
+  padding: 0px 15px;
+}
+.form-input {
+}
+.form-button {
+}
+//</FORM>====================================================================================================
+
+//<INPUT>====================================================================================================
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+.input {
+  border-radius: 0 !important;
+  width: 100%;
+  display: inline-block;
+
+  height: 40px;
+  padding: 0px 20px 0px 0px;
+  border-bottom: 3px solid #5327ff;
+  background: transparent;
+
+  color: #fff;
+  font-family: Gilroy;
+  font-size: 18px;
+  font-weight: 300;
+  letter-spacing: 0.45px;
+
+  &.focus {
+  }
+  &.err {
+    border-bottom: 3px solid rgb(255, 0, 0);
+  }
+}
+textarea.input {
+  resize: none;
+  padding: 0px 0px;
+}
+//</INPUT>====================================================================================================

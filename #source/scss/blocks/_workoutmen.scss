@@ -1,0 +1,124 @@
+.workoutmen {
+  height: 100vh;
+
+  background-image: url(../img/workoutmen_bg1.png);
+  background-repeat: no-repeat;
+
+  background-position: top right;
+  position: relative;
+
+  .fp-tableCell {
+    vertical-align: inherit;
+    padding-top: 50px;
+  }
+}
+.workoutmen {
+  &__bg {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 13%;
+    z-index: 1;
+  }
+
+  &__heading {
+    padding-left: 80px;
+  }
+
+  &__text {
+    font-family: "Gilroy";
+    color: #fff;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 24px;
+
+    span {
+      font-weight: 800;
+      letter-spacing: 0.4px;
+    }
+    margin-bottom: 50px;
+  }
+  &__circle {
+    position: relative;
+    margin-left: 16%;
+    width: 351px;
+    height: 351px;
+    border: 12px solid #5327ff;
+    opacity: 1;
+    &:before {
+      display: block;
+      width: 253px;
+      height: 253px;
+      border: 2px solid #5327ff;
+      opacity: 0.55;
+    }
+    &:after {
+      width: 554px;
+      height: 554px;
+      opacity: 0.3;
+    }
+
+    /*
+    width: 554px;
+    height: 554px;
+    &:after {
+      display: block;
+      width: 253px;
+      height: 253px;
+    }
+    &:before {
+      width: 351px;
+      height: 351px;
+    }*/
+  }
+
+  &-video {
+    &__wrapper {
+    }
+    &__inner {
+    }
+
+    &__play {
+    }
+  }
+  &__play {
+    position: relative;
+    z-index: 3;
+    cursor: pointer;
+  }
+  &-play__triangle {
+    position: relative;
+    background-color: rgb(83, 39, 255);
+    opacity: 0.7;
+    text-align: left;
+    transform-origin: 50% 50%;
+    box-shadow: 0 0 210px 26px #5327ff, -12px -46px 205px 41px #15a6ff;
+    @include anim(0.3s, 0s);
+    width: 3em;
+    height: 3em;
+
+    transform: rotate(-90deg) skewX(-30deg) scale(1, 0.866);
+    filter: drop-shadow(4px 7px 10px rgb(0, 0, 0));
+    -webkit-filter: drop-shadow(4px 7px 10px rgb(0, 0, 0));
+
+    &:hover {
+      background-color: #4727ca;
+      box-shadow: inset 0 0 10px 6px #5327ff;
+    }
+
+    &:after,
+    &:before {
+      content: "";
+      position: absolute;
+      background-color: inherit;
+      width: 3em;
+      height: 3em;
+    }
+    &:before {
+      transform: rotate(-135deg) skewX(-45deg) scale(1.414, 0.707) translate(0, -50%);
+    }
+    &:after {
+      transform: rotate(135deg) skewY(-45deg) scale(0.707, 1.414) translate(50%);
+    }
+  }
+}

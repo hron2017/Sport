@@ -1,0 +1,98 @@
+.discount {
+  background-image: url(../img/discount.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  position: relative;
+
+  .container {
+    height: 100%;
+  }
+
+  &-body {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    height: 100%;
+    position: relative;
+
+    padding-top: 40px;
+  }
+  &-form__input {
+    width: 100%;
+  }
+  &-form {
+    &:after {
+      box-shadow: -833px 166px 354px #15a6ff;
+    }
+  }
+
+  &__image {
+    position: absolute;
+    left: 135px;
+    bottom: 300px;
+
+    width: 290px;
+    height: 290px;
+    border-radius: 50%;
+    background-image: url(../img/discount-01.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    box-shadow: inset 0px -40px 74px #000;
+  }
+
+  &__image-mod {
+    position: relative;
+    left: initial;
+    bottom: initial;
+    background-image: url(../img/discount-02.png);
+    margin-bottom: 130px;
+    box-shadow: inset 0px -55px 95px #000;
+
+    .discount__title {
+      right: -13px;
+      top: 60%;
+      bottom: inherit;
+    }
+  }
+
+  &__title {
+    color: #ffffff;
+    font-family: "Gilroy";
+    font-size: 19px;
+    font-weight: 800;
+    line-height: 19px;
+    text-transform: uppercase;
+    letter-spacing: 4.6px;
+    text-align: center;
+
+    position: absolute;
+    bottom: 0;
+    padding-right: 50px;
+
+    &:after {
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 0;
+      width: 33px;
+      height: 32px;
+      border: 10px solid #5327ff;
+    }
+  }
+
+  &__banner {
+    position: absolute;
+    left: 50%;
+    top: -20%;
+    margin-left: -25%;
+    z-index: 1;
+  }
+}
+
+.discount__image {
+}

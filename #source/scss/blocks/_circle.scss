@@ -1,0 +1,37 @@
+.circle {
+  width: 696px;
+  height: 696px;
+  border: 1px solid #5327ff;
+  border-radius: 50%;
+  position: absolute;
+  opacity: 0.3;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  &:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 554px;
+    height: 554px;
+    border: 1px solid #5327ff;
+    border-radius: 50%;
+  }
+  &:before {
+    content: "";
+    width: 435px;
+    height: 435px;
+    border: 12px solid #5327ff;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    position: absolute;
+    z-index: 0;
+    display: none;
+  }
+}

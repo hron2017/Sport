@@ -1,0 +1,206 @@
+.review {
+  background: url(../img/review-bg.png) no-repeat center;
+  background-size: cover;
+  padding-top: 115px;
+  position: relative;
+
+  .container {
+    height: 100%;
+  }
+  &-body {
+    position: relative;
+    height: 100%;
+    width: 100%;
+  }
+  &__heading {
+    padding-left: 80px;
+  }
+  &-girl {
+    position: absolute;
+    bottom: 150px;
+    right: 0;
+    z-index: 3;
+  }
+
+  &-slider-wrapper {
+    width: 650px;
+    height: 650px;
+    opacity: 0.4;
+    background-color: #dfb0a2;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+
+    padding-left: 90px;
+    display: flex;
+    flex-direction: column;
+    align-items: inherit;
+    justify-content: center;
+  }
+
+  &-slider {
+    max-width: 296px;
+    min-height: 246px;
+  }
+
+  &-bottom__line {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    text-align: right;
+
+    background: linear-gradient(to bottom, #c10f2d 0%, #a5123c 100%);
+    padding-top: 80px;
+    padding-bottom: 20px;
+    //height: 260px;
+    z-index: 3;
+
+    &-btn {
+      font-family: "Gilroy";
+      font-size: 24px;
+      font-weight: 800;
+      line-height: 95.29px;
+      padding-left: 60px;
+      padding-right: 60px;
+      text-transform: uppercase;
+      background-color: #ba1031;
+      border-radius: 60px;
+      margin-right: 100px;
+      box-shadow: 0px 0px 60px rgba(255, 255, 255, 1);
+      @include anim(0.7s, 0s);
+      letter-spacing: 1.36px;
+
+      &:hover {
+        box-shadow: 0px 0px 60px #2389ff;
+        color: #2389ff;
+      }
+    }
+
+    &-text {
+      opacity: 0.6;
+      color: #ffffff;
+      font-family: "Gilroy";
+      font-size: 18px;
+      font-weight: 800;
+      line-height: 59.49px;
+      display: block;
+      padding-right: 164px;
+      letter-spacing: 1.33px;
+    }
+  }
+
+  &-slider {
+    &__arows {
+      max-width: 254px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 3;
+    }
+    &__btn {
+      opacity: 0.6;
+      color: #000000;
+      font-size: 14px;
+      font-weight: 800;
+      background-color: transparent;
+      text-decoration: underline;
+
+      letter-spacing: 2.79px;
+    }
+  }
+  &-dots {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    left: 25%;
+    @include anim(0.3s, 0s);
+    z-index: 5;
+
+    li {
+      height: 0;
+      margin-right: 15px;
+      &:last-child {
+        margin-right: 0;
+      }
+      button {
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background-color: #080909;
+        font-size: 0;
+      }
+    }
+    .slick-active {
+      @include anim(0.3s, 0s);
+      button {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        position: relative;
+
+        &:after {
+          content: "";
+          position: absolute;
+          top: -57%;
+          left: -56%;
+          width: 26px;
+          height: 26px;
+          border-radius: 50%;
+          border: 1px solid #080909;
+        }
+      }
+    }
+  }
+}
+
+.slider {
+  &-item {
+    opacity: 0;
+    @include anim(0.5s, 0s);
+    &.slick-active {
+      opacity: 1;
+    }
+    &__title {
+      color: #000000;
+      font-size: 48px;
+      font-weight: 800;
+
+      /* Text style for "Оля." */
+      letter-spacing: 3.54px;
+      position: relative;
+      &:after {
+        content: "";
+        position: absolute;
+        top: -100px;
+        right: 90px;
+        width: 138px;
+        height: 134px;
+
+        background-image: url(../img/review-icon.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+    }
+    &__postitle {
+      color: #010101;
+      opacity: 0.6;
+      font-weight: 800;
+      letter-spacing: 1.33px;
+      margin-bottom: 20px;
+      display: inline-block;
+    }
+    &__deckription {
+      color: #000000;
+      font-size: 16px;
+      font-weight: bold;
+      line-height: 20px;
+
+      letter-spacing: 0.4px;
+    }
+  }
+}

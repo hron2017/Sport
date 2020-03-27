@@ -1,0 +1,5 @@
+.discount {
+  height: 100vh;
+  background-image: url(../img/discount.png);
+  background-repeat: no-repeat;
+  position: relative; }

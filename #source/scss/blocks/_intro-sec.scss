@@ -1,0 +1,47 @@
+.section {
+  height: 100vh;
+}
+.section-in {
+  padding-top: 198px;
+}
+
+.intro {
+  background-image: url(../img/girls-intro.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+
+  &-form__inner {
+    margin-right: 56px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    border-radius: 0 9px 96px 0;
+  }
+  &-body {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding-right: 20px;
+    position: relative;
+    // margin-top: -120px;
+  }
+  &-body__shadow {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 310px;
+    height: 38px;
+    background: #16151a;
+    box-shadow: -100px -4px 140px 150px #16151a;
+    z-index: 2;
+  }
+
+  &__circle {
+    /*bottom: 18%;
+    left: 43.7%;*/
+    top: -116px;
+    right: -60px;
+  }
+}
