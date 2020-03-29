@@ -107,7 +107,17 @@ html.fp-enabled {
   right: 17px;
 }
 #fp-nav.fp-left {
-  left: 21%;
+  left: 0;
+  @media (min-width: 600px) {
+    left: 50px;
+  }
+
+  @media (min-width: 1400px) {
+    left: 150px;
+  }
+  @media (min-width: 1600px) {
+    left: 21%;
+  }
 }
 .fp-slidesNav {
   position: absolute;
@@ -233,18 +243,17 @@ html.fp-enabled {
 }
 /*# sourceMappingURL=fullpage.min.css.map */
 
-
-.fp-nav__text{
-	opacity: 0.2;
-    color: #ffffff;
-    font-family: "Gilroy";
-    font-size: 14px;
-    font-weight: 800;
-    line-height: 70px;
-    letter-spacing: 2.79px;
-    transform: rotate(90deg);
-    white-space: nowrap;
-    width: 0;
-    left: 45%;
-    position: absolute;
+.fp-nav__text {
+  opacity: 0.2;
+  color: #ffffff;
+  font-family: "Gilroy";
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 70px;
+  letter-spacing: 2.79px;
+  transform: rotate(90deg);
+  white-space: nowrap;
+  width: 0;
+  left: 45%;
+  position: absolute;
 }

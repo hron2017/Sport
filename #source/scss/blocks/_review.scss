@@ -1,11 +1,22 @@
 .review {
   background: url(../img/review-bg.png) no-repeat center;
   background-size: cover;
-  padding-top: 115px;
+  //padding-top: 115px;
   position: relative;
 
+  @media (max-width: $md2+px) {
+    padding-top: 50px;
+  }
+
+  @media (max-width: $md4+px) {
+    padding-top: 30px;
+  }
   .container {
     height: 100%;
+
+    @media (max-width: $md4+px) {
+      padding: 0;
+    }
   }
   &-body {
     position: relative;
@@ -14,36 +25,75 @@
   }
   &__heading {
     padding-left: 80px;
+
+    @media (max-width: $md2+px) {
+      padding-left: 20px;
+    }
   }
   &-girl {
     position: absolute;
     bottom: 150px;
     right: 0;
-    z-index: 3;
+
+    @media (max-width: $md2+px) {
+      width: 45%;
+    }
+    img {
+      width: 100%;
+    }
+    @media (max-width: $md4+px) {
+      bottom: 90px;
+    }
   }
 
   &-slider-wrapper {
-    width: 650px;
-    height: 650px;
+    padding-left: 15px;
     opacity: 0.4;
     background-color: #dfb0a2;
-    border-radius: 50%;
-    position: absolute;
-    bottom: 100px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 1;
+    padding-top: 35px;
+    padding-bottom: 50px;
+    border-radius: 35%;
 
-    padding-left: 90px;
-    display: flex;
-    flex-direction: column;
-    align-items: inherit;
-    justify-content: center;
+    @media (min-width: $md4+px) {
+      width: 550px;
+      height: 550px;
+      border-radius: 50%;
+      position: absolute;
+      bottom: 100px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 0;
+
+      padding-left: 90px;
+      display: flex;
+      flex-direction: column;
+      align-items: inherit;
+      justify-content: center;
+    }
+    @media (min-width: $md2+px) {
+      width: 650px;
+      height: 650px;
+    }
+    /**/
+
+    @media (max-width: $md2+px) {
+      /* width: 507px;
+      height: 520px;
+      bottom: 135px;
+      padding-left: 45px;*/
+    }
+    @media (max-width: $md4+px) {
+      padding-left: 35px;
+    }
   }
 
   &-slider {
     max-width: 296px;
     min-height: 246px;
+
+    @media (max-width: $md2+px) {
+      min-height: 200px;
+    }
   }
 
   &-bottom__line {
@@ -58,7 +108,12 @@
     padding-top: 80px;
     padding-bottom: 20px;
     //height: 260px;
-    z-index: 3;
+    //z-index: 3;
+
+    @media (max-width: $md3+px) {
+      padding-top: 20px;
+      padding-bottom: 10px;
+    }
 
     &-btn {
       font-family: "Gilroy";
@@ -74,7 +129,16 @@
       box-shadow: 0px 0px 60px rgba(255, 255, 255, 1);
       @include anim(0.7s, 0s);
       letter-spacing: 1.36px;
+      z-index: 1;
+      position: relative;
 
+      @media (max-width: $md3+px) {
+        padding-left: 30px;
+        padding-right: 30px;
+        margin-right: auto;
+        font-size: 12px;
+        line-height: 52.29px;
+      }
       &:hover {
         box-shadow: 0px 0px 60px #2389ff;
         color: #2389ff;
@@ -91,16 +155,31 @@
       display: block;
       padding-right: 164px;
       letter-spacing: 1.33px;
+
+      @media (max-width: $md3+px) {
+        font-size: 10px;
+        padding-right: 25px;
+        line-height: 21.49px;
+      }
     }
   }
 
   &-slider {
     &__arows {
-      max-width: 254px;
       display: flex;
+      flex-direction: column;
       justify-content: space-between;
-      align-items: center;
-      z-index: 3;
+      align-items: flex-start;
+
+      @media (min-width: $md2+px) {
+        justify-content: space-between;
+        align-items: center;
+        z-index: 3;
+        max-width: 254px;
+        flex-direction: row;
+      }
+      @media (max-width: $md3+px) {
+      }
     }
     &__btn {
       opacity: 0.6;
@@ -121,6 +200,10 @@
     @include anim(0.3s, 0s);
     z-index: 5;
 
+    @media (max-width: $md4+px) {
+      bottom: 35px;
+      left: 0;
+    }
     li {
       height: 0;
       margin-right: 15px;
@@ -173,6 +256,10 @@
       /* Text style for "Оля." */
       letter-spacing: 3.54px;
       position: relative;
+
+      @media (max-width: $md4+px) {
+        font-size: 24px;
+      }
       &:after {
         content: "";
         position: absolute;
@@ -184,6 +271,13 @@
         background-image: url(../img/review-icon.png);
         background-size: contain;
         background-repeat: no-repeat;
+
+        @media (max-width: $md3+px) {
+          top: -30px;
+          right: auto;
+          width: 52px;
+          height: 52px;
+        }
       }
     }
     &__postitle {
@@ -193,6 +287,10 @@
       letter-spacing: 1.33px;
       margin-bottom: 20px;
       display: inline-block;
+
+      @media (max-width: $md2+px) {
+        margin-bottom: 12px;
+      }
     }
     &__deckription {
       color: #000000;
@@ -201,6 +299,10 @@
       line-height: 20px;
 
       letter-spacing: 0.4px;
+
+      @media (max-width: $md2+px) {
+        font-size: 12px;
+      }
     }
   }
 }

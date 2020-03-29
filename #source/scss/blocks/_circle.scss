@@ -1,37 +1,110 @@
 .circle {
-  width: 696px;
-  height: 696px;
-  border: 1px solid #5327ff;
   border-radius: 50%;
   position: absolute;
-  opacity: 0.3;
-
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  &:after {
+
+  &:after,
+  &::before {
     content: "";
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 554px;
-    height: 554px;
     border: 1px solid #5327ff;
     border-radius: 50%;
   }
+}
+.intro__circle {
+  width: get-vw(435px);
+  height: get-vw(435px);
+  border: 12px solid #5327ff;
+  top: 0;
+  right: 60px;
   &:before {
-    content: "";
-    width: 435px;
-    height: 435px;
+    width: get-vw(554px);
+    height: get-vw(554px);
+    opacity: 0.3;
+  }
+  &:after {
+    width: get-vw(696px);
+    height: get-vw(696px);
+    opacity: 0.3;
+  }
+
+  @media (max-width: $md2+px) {
+    width: 350px;
+    height: 350px;
+    border: 9px solid #5327ff;
+    top: -60px;
+    right: 0;
+
+    &:before {
+      width: 414px;
+      height: 414px;
+    }
+    &:after {
+      width: 496px;
+      height: 496px;
+    }
+  }
+
+  @media (max-width: $md4+px) {
+    width: 150px;
+    height: 150px;
+    border: 4px solid #5327ff;
+    top: auto;
+    right: 0;
+    bottom: 25px;
+    &:before {
+      width: 250px;
+      height: 250px;
+    }
+    &:after {
+      width: 200px;
+      height: 200px;
+    }
+  }
+}
+.workoutmen {
+  &__circle {
+    position: relative;
+    margin-left: 16%;
+    width: 351px;
+    height: 351px;
     border: 12px solid #5327ff;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: 50%;
-    position: absolute;
-    z-index: 0;
-    display: none;
+    opacity: 1;
+
+    @media (max-width: $md4+px) {
+      margin: 0 auto;
+    }
+    &:before {
+      display: block;
+      width: 253px;
+      height: 253px;
+      border: 2px solid #5327ff;
+      opacity: 0.55;
+    }
+    &:after {
+      width: 554px;
+      height: 554px;
+      opacity: 0.3;
+    }
+
+    @media (max-width: $md4+px) {
+      width: 200px;
+      height: 200px;
+      border: 4px solid #5327ff;
+    }
+    &:before {
+      width: 150px;
+      height: 150px;
+    }
+    &:after {
+      width: 250px;
+      height: 250px;
+    }
   }
 }

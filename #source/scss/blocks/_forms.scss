@@ -1,16 +1,50 @@
 //<FORM>====================================================================================================
 .intro-form {
+  @media (max-width: $md4+px) {
+    width: 100%;
+  }
   &:before {
     content: "";
-    width: 435px;
-    height: 435px;
-    border: 12px solid #5327ff;
+    width: get-vw(435px);
+    height: get-vw(435px);
+    border: get-vw(12px) solid #5327ff;
     top: 0;
     left: 33%;
     transform: translate(-50%, -50%);
     border-radius: 50%;
     position: absolute;
     z-index: 0;
+    display: none;
+
+    @media (max-width: $md4+px) {
+      width: 200px;
+      height: 200px;
+      top: 50px;
+      left: 75%;
+
+      display: none;
+    }
+  }
+
+  &__inner {
+    margin-right: 56px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    border-radius: 0 9px 96px 0;
+
+    @media (max-width: 1300px) {
+      align-items: flex-end;
+    }
+
+    @media (max-width: $md4+px) {
+      max-width: 58%;
+      border-radius: 0 71px 15px 0;
+    }
+  }
+  &__botton {
+    padding-left: 30px;
+    margin-top: 15px;
   }
 }
 .form {
@@ -20,36 +54,53 @@
   &:after {
     content: "";
 
-    box-shadow: -750px 34px 250px #15a6ff;
+    box-shadow: get-vw(-750px) get-vw(34px) get-vw(250px) #15a6ff;
     position: absolute;
     top: -32%;
     right: -200%;
     height: 42%;
     width: 75%;
+
+    @media (max-width: $md4+px) {
+      box-shadow: -125px 50px 158px #15a6ff;
+      right: -90%;
+    }
   }
   &__input {
-    margin-bottom: 25px;
+    margin-bottom: get-vw(25px);
     position: relative;
     text-align: center;
-    width: 90%;
+    //width: 90%;
+    margin-left: 15px;
+
+    @media (max-width: 600px) {
+      width: 90%;
+    }
   }
   &__btn {
-    box-shadow: 0 0 90px 16px rgba(35, 31, 32, 0.75);
+    box-shadow: 0 0 get-vw(90px) get-vw(16px) rgba(35, 31, 32, 0.75);
     background-image: linear-gradient(-187deg, #5327ff 0%, #11aeff 100%);
 
     color: #ffffff;
     font-family: "Gilroy";
-    font-size: 30px;
+    font-size: get-vw(30px);
     font-weight: 800;
-    line-height: 95.29px;
-    padding: 0px 44px 0px 44px;
+    line-height: get-vw(95.29px);
+    padding: 0px get-vw(44px) 0px get-vw(44px);
     position: relative;
     z-index: 3;
 
-    border-radius: 50px;
-    margin-top: 20px;
+    border-radius: get-vw(50px);
+    margin-top: get-vw(20px);
 
     letter-spacing: 0.23px;
+
+    @media (max-width: $md4+px) {
+      font-size: 14px;
+      line-height: 36px;
+      border-radius: 18px;
+      padding: 0 22px;
+    }
   }
   &__error {
     position: absolute;
@@ -102,7 +153,6 @@ textarea {
   width: 100%;
   display: inline-block;
 
-  height: 40px;
   padding: 0px 20px 0px 0px;
   border-bottom: 3px solid #5327ff;
   background: transparent;
@@ -112,6 +162,14 @@ textarea {
   font-size: 18px;
   font-weight: 300;
   letter-spacing: 0.45px;
+
+  @media (min-width: 1300px) {
+    height: 40px;
+  }
+  @media (max-width: $md4+px) {
+    height: 27px;
+    font-size: 12px;
+  }
 
   &.focus {
   }

@@ -44,8 +44,6 @@ new fullpage('#fullpage', {
 
 $('#fp-nav').append('<div class="fp-nav__text">гортай вниз</div>');
 
-
-
 $('.footer-body__image-icon').click(function () {
 
 	$(".footer-body__image-icon").removeClass('active');
