@@ -18,6 +18,10 @@
   @media (max-width: $md2+px) {
     background-position: 0 15%;
   }
+  @media (min-width: $md2+px) {
+    background-size: cover;
+    background-position: inherit;
+  }
 
   &-body {
     display: flex;

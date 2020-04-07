@@ -278,7 +278,7 @@ html.fp-enabled {
       left: 150px; } }
   @media (min-width: 1600px) {
     #fp-nav.fp-left {
-      left: 21%; } }
+      left: 15%; } }
 
 .fp-slidesNav {
   position: absolute;
@@ -717,13 +717,13 @@ textarea.input {
   -webkit-background-clip: text;
   background-clip: text;
   color: #2389ff; }
+  @media (max-width: 1300px) {
+    .intro__subtitle {
+      margin-bottom: 0; } }
   @media (max-width: 576.98px) {
     .intro__subtitle {
       text-align: center;
-      margin-bottom: 10px; } }
-  @media (max-width: 1300px) {
-    .intro__subtitle {
-      margin-bottom: 18px; } }
+      margin-bottom: 0; } }
   .intro__subtitle:after {
     content: "";
     -webkit-box-shadow: -750px 34px 250px #000;
@@ -1048,6 +1048,10 @@ textarea.input {
   @media (max-width: 992.98px) {
     .intro {
       background-position: 0 15%; } }
+  @media (min-width: 992.98px) {
+    .intro {
+      background-size: cover;
+      background-position: inherit; } }
   .intro-body {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1632,6 +1636,9 @@ textarea.input {
   padding-bottom: 200px; }
   .footer .container {
     height: 100%; }
+  .footer p {
+    font-size: 25px;
+    color: #ffffff; }
   .footer-body {
     height: 100%;
     position: relative;

@@ -789,6 +789,7 @@ $(document).ready(function () {
 		navigation: true,
 		navigationPosition: 'left',
 		verticalCentered: true,
+		scrolloverflow: true
 
 	});
 
